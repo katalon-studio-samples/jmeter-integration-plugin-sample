@@ -1,0 +1,11 @@
+# Compiled class file
+*.class
+
+# Katalon
+Libs
+settings/internal/com.kms.katalon.composer.testcase.properties
+
+# Eclipse
+bin
+.classpath
+.project
