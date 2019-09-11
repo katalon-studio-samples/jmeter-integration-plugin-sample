@@ -11,15 +11,18 @@ import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jmeter.testelement.TestPlan;
 import org.apache.jorphan.collections.HashTree;
 
-public class KatalonJMeterRunner {
+import com.kms.katalon.core.configuration.RunConfiguration;
+import com.kms.katalon.core.util.KeywordUtil;
 
+
+public class KatalonJMeterRunner {
 	private static NUM_LOOPS = 1;
 	private static NUM_THREADS = 2;
 	private static RAMP_UP = 1;
 	private static DURATION = 10000;
 
-	private static REPORT_DIR = "Reports/jmeter-report";
-	private static JTL_FILE = "Reports/jmeter-result.csv";
+	private static REPORT_DIR = "${RunConfiguration.getReportFolder()}${File.separator}jmeter-report";
+	private static JTL_FILE = "${RunConfiguration.getReportFolder()}${File.separator}jmeter-result.csv";
 
 	public void run(KatalonSampler sampler) throws IOException {
 		// JMeter Engine
@@ -82,8 +85,8 @@ public class KatalonJMeterRunner {
 			e.printStackTrace();
 		}
 
-		System.out.println("Test completed. See test.jtl file for results");
-		System.out.println("Open test.jmx file in JMeter GUI to validate the code");
+		KeywordUtil.logInfo("Test completed. See ${JTL_FILE} file for results");
+		KeywordUtil.logInfo("JMeter report directory is ${REPORT_DIR}");
 		System.exit(0);
 	}
 }

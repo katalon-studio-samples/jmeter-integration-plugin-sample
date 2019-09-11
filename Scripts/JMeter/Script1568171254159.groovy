@@ -19,8 +19,6 @@ import com.katalon.jmeter.KatalonJMeterRunner
 def testAction = {
 	WebUI.callTestCase(findTestCase('Test Cases/REST examples/Simple examples/api-2-search/Search issues/Search issues by jql'),
 				[('issue_key') : ''], FailureHandling.STOP_ON_FAILURE);
-	WebUI.callTestCase(findTestCase('Test Cases/REST examples/Simple examples/api-2-issue/Get issue/Get an issue by Key - 1'),
-				[('issue_key') : ''], FailureHandling.STOP_ON_FAILURE);
 };
 
 def sampler = CustomKeywords.'com.katalon.jmeter.JMeterKeyword.createSampler'(testAction);
