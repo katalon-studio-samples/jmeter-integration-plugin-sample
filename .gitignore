@@ -3,9 +3,13 @@
 
 # Katalon
 Libs
+Plugins
 settings/internal/com.kms.katalon.composer.testcase.properties
 
 # Eclipse
 bin
 .classpath
 .project
+
+# JMeter
+jmeter-result.csv
