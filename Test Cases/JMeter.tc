@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>KatalonJMeter</name>
+   <name>JMeter</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>b5cef0a0-cc5a-4e5b-8690-66709035366b</testCaseGuid>
+   <testCaseGuid>ab32ee5b-2fc1-4050-a2e0-97e23ad51e1a</testCaseGuid>
 </TestCaseEntity>
