@@ -13,3 +13,4 @@ bin
 
 # JMeter
 jmeter-result.csv
+Include\jmeter-properties\bin\report-output
