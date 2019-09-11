@@ -12,13 +12,14 @@ import org.apache.jmeter.testelement.TestPlan;
 import org.apache.jorphan.collections.HashTree;
 
 public class KatalonJMeterRunner {
-	
+
 	private static NUM_LOOPS = 1;
 	private static NUM_THREADS = 2;
 	private static RAMP_UP = 1;
 	private static DURATION = 10000;
-	
-	private static JTL_FILE = "jmeter-result.csv";
+
+	private static REPORT_DIR = "Reports/jmeter-report";
+	private static JTL_FILE = "Reports/jmeter-result.csv";
 
 	public void run(KatalonSampler sampler) throws IOException {
 		// JMeter Engine
@@ -27,7 +28,7 @@ public class KatalonJMeterRunner {
 		JMeterUtils.loadJMeterProperties('Include/jmeter-properties/bin/jmeter.properties');
 		JMeterUtils.setJMeterHome('Include/jmeter-properties/');
 		JMeterUtils.initLocale();
-		JMeterUtils.setProperty("output_dir", "./jmeter-report");
+		JMeterUtils.setProperty("jmeter.reportgenerator.exporter.html.property.output_dir", REPORT_DIR);
 
 		// JMeter Test Plan
 		HashTree testPlanTree = new HashTree();

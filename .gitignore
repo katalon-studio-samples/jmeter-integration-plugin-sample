@@ -12,6 +12,9 @@ bin
 .classpath
 .project
 
+# Gradle
+.gradle
+
 # JMeter
 jmeter-result.csv
 Include\jmeter-properties\bin\report-output
